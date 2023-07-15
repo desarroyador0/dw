@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frases de Amor, Destino y Camino Espiritual</title>
+    <script type="text/javascript">
+        function generarFrase() {
+            var frases = [
+                "El amor es el lenguaje universal que une a todas las almas.",
+                "El destino nos guía hacia las personas y experiencias que necesitamos para crecer espiritualmente.",
+                "Cada paso en nuestro camino espiritual nos acerca más al amor incondicional.",
+                "El amor verdadero es el resultado de un camino espiritual compartido.",
+                "El destino nos desafía a encontrar el amor en los momentos más inesperados.",
+                "El camino espiritual nos enseña que el amor propio es el cimiento para amar a los demás.",
+                "El amor es el vínculo que conecta nuestras almas en el viaje de la vida.",
+                "El destino nos presenta lecciones de amor que nos ayudan a evolucionar espiritualmente.",
+                "El camino espiritual nos invita a abrir nuestros corazones y abrazar el amor en todas sus formas.",
+                "El amor es la energía que impulsa nuestro camino espiritual hacia la plenitud."
+            ];
+
+            var numero = parseInt(document.getElementById("numero").value);
+
+            if (isNaN(numero) || numero < 1 || numero > 99999) {
+                document.getElementById("resultado").innerHTML = "Por favor, ingresa un número válido.";
+            } else {
+                var indice = numero % frases.length;
+                document.getElementById("resultado").innerHTML = frases[indice];
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Frases de Amor, Destino y Camino Espiritual</h1>
+    <p>Ingresa un número del 1 al 99999 para obtener una frase relacionada con el amor, el destino y el camino espiritual:</p>
+    <input type="text" id="numero">
+    <button onclick="generarFrase()">Generar</button>
+    <p id="resultado"></p>
+</body>
+</html>
